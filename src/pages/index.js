@@ -10,6 +10,7 @@ export default function Home() {
       <main className="mx-auto w-auto">       
           <MenuButton>Menu</MenuButton>
           <MenuButton>Contact</MenuButton>
+          <MenuButton>PROJECTS</MenuButton>
       </main>
     </div>
   );
