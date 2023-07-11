@@ -11,6 +11,7 @@ export default function Home() {
           <MenuButton>Menu</MenuButton>
           <MenuButton>Contact</MenuButton>
           <MenuButton>PROJECTS</MenuButton>
+          <MenuButton>About Me</MenuButton>
       </main>
     </div>
   );
