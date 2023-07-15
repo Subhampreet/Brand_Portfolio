@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
+import Hamburger from './Hamburger';
 
 function Header() {
   return (
@@ -8,7 +9,7 @@ function Header() {
             <div className='wrapper'>
                 <div className='inner-header'>
                     <div className='logo'>
-                        <Link href="/">SM</Link>
+                        <Link href="/" className='brand'>SM</Link>
                     </div>
                     <div className='menu'>
                         <button>
@@ -18,6 +19,7 @@ function Header() {
                 </div>
             </div>
         </div>
+        <Hamburger />
     </div>
   )
 }

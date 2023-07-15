@@ -1,67 +1,207 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@font-face {
-  font-family: 'Aeonik';
-  src: url('../fonts/aeonik-bold.woff2') format('woff2'),
-    url('../fonts/aeonik-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aeonik';
-  src: url('../fonts/aeonik-regular.woff2') format('woff2'),
-    url('../fonts/aeonik-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aeonik';
-  src: url('../fonts/aeonik-light.woff2') format('woff2'),
-    url('../fonts/aeonik-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Apoc';
-  src: url('../fonts/apoc-bold.woff2') format('woff2'),
-    url('../fonts/apoc-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Apoc';
-  src: url('../fonts/apoc-regular.woff2') format('woff2'),
-    url('../fonts/apoc-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Apoc';
-  src: url('../fonts/apoc-light.woff2') format('woff2'),
-    url('../fonts/apoc-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
-  font-family: 'Aeonik';
-  background: #f5f4f5;
-  color: #282829;
-  font-style: normal;
-  font-weight: 400;
-  max-width: 100vw;
-  transition: background 0.6s ease-out, color 0.6s ease-out;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  all: unset;
+}
+
+button{
+  text-decoration: none;
+  all: unset;
+}
+
+/* -------------Home-------------- */
+
+.Home .container {  
+  margin: 0 auto;
+}
+
+/* .Home .container .wrapper{
+  padding: 0 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+} */
+
+.Home .container .wrapper p{
+  font-size: .75rem;
+  /* letter-spacing: .3rem; */
+}
+
+.Home .container .wrapper h5{
+  margin-top: 260px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 100px;
+}
+
+
+/* ------------Header----------- */
+.header{
+  height: 100px;
+}
+
+.header .container {
+  width: 100%;
+}
+
+.header .container .wrapper{
+  width: 90%;
+  margin: auto;
+}
+
+.header .inner-header{
+  position: relative;
+  z-index: 10;
+  height: 100px;
+  display: inline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.header .inner-header .logo .brand{
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.header .hamburger-menu{
+  /* display: none; */
+  z-index: 9;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.hamburger-menu .menu-secondary-background-color{
+  background-color: black;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.hamburger-menu .menu-layer{
+  position: relative;
+  background: red;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hamburger-menu .menu-layer .menu-city-background{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.hamburger-menu .menu-layer .wrapper{
+  position: relative;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 200px;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links nav{
+  display: block;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links nav ul{
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links nav ul li{
+  list-style: none;
+  font-size: 6rem;
+  font-weight: 700;
+  cursor: pointer;
+  height: 135px;
+  overflow: hidden;
+  position: relative;
+  width: 700px;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links nav ul li .menu-item{
+  position: absolute;
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links nav ul li .menu-item:hover{
+  color: black;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .info{
+  color: #fff;
+  width: 500px;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .info h3{
+  font-size: 1.5rem;
+  width: 300px;
+  letter-spacing: 0.08rem;
+  line-height: 20px;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .info p{
+  margin: 0 auto;
+  font-size: 0.9rem;
+  letter-spacing: 0.08rem;
+  line-height: 20px;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .locations{
+  position: absolute;
+  bottom: -80px;
+  color: #fff;
+  margin-top: 16px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .locations span{
+  cursor: pointer;
+  margin: 0 32px;
+  transition: .3s ease-in-out;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .locations span:first-child{
+  margin-left: 64px; 
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .locations span:hover{
+  background: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+
