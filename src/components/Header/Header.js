@@ -37,6 +37,7 @@ function Header({router}) {
             menuName :"Close",
         });
         // console.log(3);
+        console.log(state)
     }
   }
 
