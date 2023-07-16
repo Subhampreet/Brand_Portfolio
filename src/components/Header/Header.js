@@ -1,15 +1,20 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Link from 'next/link';
 import Hamburger from './Hamburger';
+import { withRouter } from 'next/router';
 
-function Header() {
+function Header({router}) {
+  // State for menu button
   const [state, setState] = useState({
     initial:false,
     clicked: null,
     menuName: "Menu"
   }) 
-
+  // State for disabled button
   const [disabled, setDisabled] = useState()
+
+//   console.log(router.pathname)
+  
 
   const handleMenu = () => {
     if(state.initial === false){
@@ -18,20 +23,20 @@ function Header() {
             clicked : true,
             menuName:"Close",
         });
-        console.log(1)
+        // console.log(1)
     }
     else if (state.clicked === true){
         setState({
             clicked: !state.clicked,
             menuName :"Menu",
         });
-        console.log(2)
+        // console.log(2)
     } else if(state.clicked === false){
         setState({
             clicked:!state.clicked,
             menuName :"Close",
         });
-        console.log(3);
+        // console.log(3);
     }
   }
 
@@ -64,4 +69,4 @@ function Header() {
   )
 }
 
-export default Header
+export default withRouter(Header)
