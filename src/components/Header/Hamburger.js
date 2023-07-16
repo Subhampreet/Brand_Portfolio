@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Link from 'next/link';
 
-function Hamburger() {
+function Hamburger({state}) {
+
+  let menu = useRef(null);
+
+  useEffect(() => {
+    if(state.clicked === false){
+      // close our Menu
+      menu.current.style.display = "none";
+    } else if (state.clicked === true || state.clicked === true && state.inital === null){
+      // open our menu
+      menu.current.style.display="block";
+    }
+  })
+  
   return (
-    <div className="hamburger-menu">
+    <div ref = {menu} className="hamburger-menu">
       <div className="menu-secondary-background-color"></div>
       <div className="menu-layer">
         <div className="menu-city-background"></div>
