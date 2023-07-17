@@ -81,6 +81,7 @@ function Hamburger({ state, router }) {
             <div className="menu-links">
               <nav>
                 <ul>
+                  {/* Dynamic Menu */}
                   {
                     menuItems
                     .filter(menuItem => menuItem.route !== route)
