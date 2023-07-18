@@ -79,16 +79,27 @@ function Hamburger({ state, router }) {
         css: {display: "block"}
       });
       gsap.to([revealMenuBackground.current, revealMenu.current], {
-        duration:0.8,
+        duration:0,
         opacity: 1,
-        height: "100%",
-        ease:"power3.inOut",
-        stagger:{
-          amount:0.07
-        }
+        height: "100%"
       });
+
+      staggerReveal(revealMenuBackground.current, revealMenu.current);
     }    
-  });
+  }, [state]);
+
+  const staggerReveal = (node1, node2) => {
+    gsap.from([node1, node2], {
+      duration: 0.8,
+      height: 0,
+      transformOrigin: "right top",
+      skewY: 2,
+      ease: "power3.inOut",
+      stagger: {
+        amount: 0.1
+      }
+    });
+  };
 
   return (
     <div ref={menu} className="hamburger-menu">
