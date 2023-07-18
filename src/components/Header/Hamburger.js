@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
+import { gsap } from "gsap";
 
 function Hamburger({ state, router }) {
   let menu = useRef(null);
@@ -54,18 +55,39 @@ function Hamburger({ state, router }) {
   useEffect(() => {
     if (state.clicked === false) {
       // close our Menu
-      menu.current.style.display = 'none';
+      // menu.current.style.display = 'none';
+      gsap.to([revealMenu.current, revealMenuBackground.current], {
+        duration:0.8,
+        height:0,
+        ease:"power3.inOut",
+        stagger:{
+          amount:0.07
+        }
+      });
+      gsap.to(menu.current, {
+        duration:1,
+        css: {display: "none"}
+      });
     } else if (
       state.clicked === true ||
       (state.clicked === true && state.inital === null)
     ) {
       // open our menu
-      menu.current.style.display = 'block';
-    }
-    // else if (state.clicked === false && state.menuName === "Menu" && router.pathname === route){
-    //   menu.current.style.display="block";
-    // }
-    //console.log(state)
+      // menu.current.style.display = 'block';
+      gsap.to(menu.current, {
+        duration:0,
+        css: {display: "block"}
+      });
+      gsap.to([revealMenuBackground.current, revealMenu.current], {
+        duration:0.8,
+        opacity: 1,
+        height: "100%",
+        ease:"power3.inOut",
+        stagger:{
+          amount:0.07
+        }
+      });
+    }    
   });
 
   return (
