@@ -85,6 +85,8 @@ function Hamburger({ state, router }) {
       });
 
       staggerReveal(revealMenuBackground.current, revealMenu.current);
+      fadeInUp(info.current);
+      // staggerText(line1.current, line2.current, line3.current)
     }    
   }, [state]);
 
@@ -98,6 +100,28 @@ function Hamburger({ state, router }) {
       stagger: {
         amount: 0.1
       }
+    });
+  };
+
+  // const staggerText = (node1, node2, node3) => {
+  //   gsap.from([node1, node2, node3], {
+  //     duration: 0.8,
+  //     y: 100,
+  //     delay: 0.1,
+  //     ease: "power3.inOut",
+  //     stagger: {
+  //       amount: 0.3
+  //     }
+  //   });
+  // };
+
+  const fadeInUp = node => {
+    gsap.from(node, {
+      y: 60,
+      duration: 1,
+      delay: 0.2,
+      opacity: 0,
+      ease: "power3.input"
     });
   };
 
