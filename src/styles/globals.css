@@ -144,8 +144,25 @@ button{
   width: 40px;
 }
 
+.header .inner-header .logo .brand .logo-icon:hover{
+  cursor: pointer;
+}
+
 .header .inner-header .menu button:hover{
   cursor: pointer;
+}
+
+.header .inner-header .menu button .ham-bar-1{
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 6px;
+}
+
+.header .inner-header .menu button .ham-bar-2{
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
 }
 
 .header .hamburger-menu{

@@ -1,19 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
-import { gsap } from "gsap";
-
-import mumbai from '../../../public/image/03.jpg';
-import kolkata from '../../../public/image/01.jpg';
-import bangalore from '../../../public/image/02.jpg';
+import { gsap } from 'gsap';
 
 const cities = [
-  {name: "Mumbai", image: 'https://pbs.twimg.com/media/FBGN4HYVEAA_xYh.jpg'},
-  {name: "Kolakta", image: 'https://i.ytimg.com/vi/9mxPkKpf5CY/maxresdefault.jpg'},
-  {name: "Bangalore", image: 'https://media.istockphoto.com/id/1384436794/photo/bangalore-or-bengaluru.jpg?b=1&s=170667a&w=0&k=20&c=i53BC18osO73ew416Z6JevHlu-qM3D-oRtwFbYyjL0Q='},
-]
-
-
+  { name: 'Mumbai', image: 'https://pbs.twimg.com/media/FBGN4HYVEAA_xYh.jpg' },
+  {
+    name: 'Kolakta',
+    image: 'https://i.ytimg.com/vi/9mxPkKpf5CY/maxresdefault.jpg',
+  },
+  {
+    name: 'Bangalore',
+    image:
+      'https://media.istockphoto.com/id/1384436794/photo/bangalore-or-bengaluru.jpg?b=1&s=170667a&w=0&k=20&c=i53BC18osO73ew416Z6JevHlu-qM3D-oRtwFbYyjL0Q=',
+  },
+];
 
 function Hamburger({ state, router }) {
   let menu = useRef(null);
@@ -69,16 +70,16 @@ function Hamburger({ state, router }) {
       // close our Menu
       // menu.current.style.display = 'none';
       gsap.to([revealMenu.current, revealMenuBackground.current], {
-        duration:0.8,
-        height:0,
-        ease:"power3.inOut",
-        stagger:{
-          amount:0.07
-        }
+        duration: 0.8,
+        height: 0,
+        ease: 'power3.inOut',
+        stagger: {
+          amount: 0.07,
+        },
       });
       gsap.to(menu.current, {
-        duration:1,
-        css: {display: "none"}
+        duration: 1,
+        css: { display: 'none' },
       });
     } else if (
       state.clicked === true ||
@@ -87,31 +88,31 @@ function Hamburger({ state, router }) {
       // open our menu
       // menu.current.style.display = 'block';
       gsap.to(menu.current, {
-        duration:0,
-        css: {display: "block"}
+        duration: 0,
+        css: { display: 'block' },
       });
       gsap.to([revealMenuBackground.current, revealMenu.current], {
-        duration:0,
+        duration: 0,
         opacity: 1,
-        height: "100%"
+        height: '100%',
       });
 
       staggerReveal(revealMenuBackground.current, revealMenu.current);
       fadeInUp(info.current);
       // staggerText(line1.current, line2.current, line3.current)
-    }    
+    }
   }, [state]);
 
   const staggerReveal = (node1, node2) => {
     gsap.from([node1, node2], {
       duration: 0.8,
       height: 0,
-      transformOrigin: "right top",
+      transformOrigin: 'right top',
       skewY: 2,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
       stagger: {
-        amount: 0.1
-      }
+        amount: 0.1,
+      },
     });
   };
 
@@ -127,39 +128,39 @@ function Hamburger({ state, router }) {
   //   });
   // };
 
-  const fadeInUp = node => {
+  const fadeInUp = (node) => {
     gsap.from(node, {
       y: 60,
       duration: 1,
       delay: 0.2,
       opacity: 0,
-      ease: "power3.input"
+      ease: 'power3.input',
     });
   };
 
-  const handleCity = city => {
+  const handleCity = (city) => {
     gsap.to(cityBackgound.current, {
       duration: 0,
       background: `url(${city}) center center`,
     });
     gsap.to(cityBackgound.current, {
-      duration:0.4, 
+      duration: 0.4,
       opacity: 1,
-      ease: "power3.inOut"
+      ease: 'power3.inOut',
     });
     gsap.from(cityBackgound.current, {
       duration: 0.4,
       skewY: 2,
-      transformOrigin: "right top"
+      transformOrigin: 'right top',
     });
-  }
+  };
 
   const handleCityReturn = () => {
     gsap.to(cityBackgound.current, {
       duration: 0.5,
-      opacity: 0
+      opacity: 0,
     });
-  }
+  };
 
   return (
     <div ref={menu} className="hamburger-menu">
@@ -175,10 +176,9 @@ function Hamburger({ state, router }) {
               <nav>
                 <ul>
                   {/* Dynamic Menu */}
-                  {
-                    menuItems
-                    .filter(menuItem => menuItem.route !== route)
-                    .map(( menuItem, index ) => (
+                  {menuItems
+                    .filter((menuItem) => menuItem.route !== route)
+                    .map((menuItem, index) => (
                       <li key={index}>
                         <Link
                           ref={menuItem.ref}
@@ -188,8 +188,7 @@ function Hamburger({ state, router }) {
                           {menuItem.name}
                         </Link>
                       </li>
-                    )) 
-                  }                  
+                    ))}
                   {/* <li>
                     <Link ref={line1} href="/about" className="menu-item">
                       About Me
@@ -218,8 +217,14 @@ function Hamburger({ state, router }) {
               </div>
               <div className="locations">
                 Locations:
-                {cities.map(el => (
-                  <span key={el.name} onMouseEnter={() => handleCity(el.image)} onMouseOut={handleCityReturn}>{el.name}</span>
+                {cities.map((el) => (
+                  <span
+                    key={el.name}
+                    onMouseEnter={() => handleCity(el.image)}
+                    onMouseOut={handleCityReturn}
+                  >
+                    {el.name}
+                  </span>
                 ))}
               </div>
             </div>

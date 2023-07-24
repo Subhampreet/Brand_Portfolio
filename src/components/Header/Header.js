@@ -60,7 +60,8 @@ function Header({router}) {
                     </div>
                     <div className='menu'>
                         <button disabled={disabled} onClick={handleMenu}>
-                            Menu
+                            <div className='ham-bar-1'></div>
+                            <div className='ham-bar-2'></div>
                         </button>
                     </div>
                 </div>
