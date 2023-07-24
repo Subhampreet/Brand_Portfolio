@@ -3,6 +3,18 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { gsap } from "gsap";
 
+import mumbai from '../../../public/image/03.jpg';
+import kolkata from '../../../public/image/01.jpg';
+import bangalore from '../../../public/image/02.jpg';
+
+const cities = [
+  {name: "Mumbai", image: 'https://pbs.twimg.com/media/FBGN4HYVEAA_xYh.jpg'},
+  {name: "Kolakta", image: 'https://i.ytimg.com/vi/9mxPkKpf5CY/maxresdefault.jpg'},
+  {name: "Bangalore", image: 'https://media.istockphoto.com/id/1384436794/photo/bangalore-or-bengaluru.jpg?b=1&s=170667a&w=0&k=20&c=i53BC18osO73ew416Z6JevHlu-qM3D-oRtwFbYyjL0Q='},
+]
+
+
+
 function Hamburger({ state, router }) {
   let menu = useRef(null);
   let revealMenu = useRef(null);
@@ -125,6 +137,30 @@ function Hamburger({ state, router }) {
     });
   };
 
+  const handleCity = city => {
+    gsap.to(cityBackgound.current, {
+      duration: 0,
+      background: `url(${city}) center center`,
+    });
+    gsap.to(cityBackgound.current, {
+      duration:0.4, 
+      opacity: 1,
+      ease: "power3.inOut"
+    });
+    gsap.from(cityBackgound.current, {
+      duration: 0.4,
+      skewY: 2,
+      transformOrigin: "right top"
+    });
+  }
+
+  const handleCityReturn = () => {
+    gsap.to(cityBackgound.current, {
+      duration: 0.5,
+      opacity: 0
+    });
+  }
+
   return (
     <div ref={menu} className="hamburger-menu">
       <div
@@ -132,7 +168,7 @@ function Hamburger({ state, router }) {
         className="menu-secondary-background-color"
       ></div>
       <div ref={revealMenu} className="menu-layer">
-        <div className="menu-city-background"></div>
+        <div ref={cityBackgound} className="menu-city-background"></div>
         <div className="container">
           <div className="wrapper">
             <div className="menu-links">
@@ -182,10 +218,9 @@ function Hamburger({ state, router }) {
               </div>
               <div className="locations">
                 Locations:
-                <span>Mumbai</span>
-                <span>Bangalore</span>
-                <span>Hyderabad</span>
-                <span>Bhubaneswar</span>
+                {cities.map(el => (
+                  <span key={el.name} onMouseEnter={() => handleCity(el.image)} onMouseOut={handleCityReturn}>{el.name}</span>
+                ))}
               </div>
             </div>
           </div>
