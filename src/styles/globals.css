@@ -2,6 +2,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 
 ul{
@@ -46,10 +48,69 @@ button{
   padding: 100px;
 }
 
+.Home .container .wrapper{
+  width: 80%;
+  margin: auto;
+}
+
+.Home .container .wrapper .top{
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  width: 35%;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 0px !important;
+}
+
+.Home .container .wrapper .top h3{
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  font-size: 15px;
+}
+
+.Home .container .wrapper .top .head-bar{
+  width: 50px;
+  height: 1.7px;
+  background-color: #4D4D4D;
+}
+
+.Home .container .wrapper .top .head-desc{
+  font-size: 15px;
+}
+
+.Home .container .wrapper .mid{
+  width: 100%;
+  margin-top: -135px;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 0px !important;
+}
+
+.Home .container .wrapper .mid p {
+  font-size: 150px;
+  margin-bottom: 0px !important;
+  line-height: 7.5rem;
+}
+
+.Home .container .wrapper .mid p img{
+  width: 100px;
+}
+
+.Home .container .wrapper .bottom p{
+  color: #fff;
+  margin-top: -135px !important;
+  width: 70%;
+  color: #C5C0C0;
+  font-size: 15px;
+  line-height: 1.5rem;
+  letter-spacing: 0.01rem;
+}
+
 
 /* ------------Header----------- */
 .header{
-  height: 100px;
+  height: 80px;
 }
 
 .header .container {
@@ -69,12 +130,18 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;  
+  color: #fff;
 }
 
 .header .inner-header .logo .brand{
   font-weight: 700;
   text-decoration: none;
-  color: black;
+  /* color: black; */
+  color: white;
+}
+
+.header .inner-header .logo .brand .logo-icon{
+  width: 40px;
 }
 
 .header .inner-header .menu button:hover{

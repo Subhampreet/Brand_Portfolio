@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Link from 'next/link';
 import Hamburger from './Hamburger';
 import { withRouter } from 'next/router';
+import logo from '../../../public/logo.jpg'
 
 function Header({router}) {
   // State for menu button
@@ -55,7 +56,7 @@ function Header({router}) {
             <div className='wrapper'>
                 <div className='inner-header'>
                     <div className='logo'>
-                        <Link href="/" className='brand'>SM</Link>
+                        <Link href="/" className='brand'><img src='/logo.jpg' className='logo-icon' /></Link>
                     </div>
                     <div className='menu'>
                         <button disabled={disabled} onClick={handleMenu}>

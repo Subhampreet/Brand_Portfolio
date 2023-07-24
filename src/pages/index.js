@@ -7,6 +7,12 @@ export default function Home() {
       <Head>
         <title>Template</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       {/* <main className="mx-auto w-auto">       
           <MenuButton>Menu</MenuButton>
@@ -17,11 +23,29 @@ export default function Home() {
       <Header />
       <div className="container">
         <div className="wrapper">
-          <h5>
+          <div className="top">
+            <h3>I'm subhampreet</h3>
+            <div className="head-bar"></div>
+            <p className="head-desc">available for freelance work</p>
+          </div>
+          <div className="mid">
+            <p>I'm Freelance Web and Product Developer Transforming <img src="/headimg.png"></img> Code Into Art</p>
+            {/*  */}
+            <p></p>
+          </div>
+          <div className="bottom">
+            <p>
+              I help companies to design digital products and turn ideas into a
+              functional and delightful experience. I’m focusing on working on
+              interface and digital design – mainly building products, branding
+              and websites.
+            </p>
+          </div>
+          {/* <h5>
             The <b>HAMBRG</b>, is a creative, engineer driven, global agency
             working on advancing the software, advertising and design
             communities to new heights.
-          </h5>
+          </h5> */}
         </div>
       </div>
     </div>
