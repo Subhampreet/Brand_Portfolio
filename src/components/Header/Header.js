@@ -56,7 +56,7 @@ function Header({router}) {
             <div className='wrapper'>
                 <div className='inner-header'>
                     <div className='logo'>
-                        <Link href="/" className='brand'><img src='/logo.jpg' className='logo-icon' /></Link>
+                        <Link href="/" className='brand'><img src='/logo.png' className='logo-icon' /></Link>
                     </div>
                     <div className='menu'>
                         <button disabled={disabled} onClick={handleMenu}>

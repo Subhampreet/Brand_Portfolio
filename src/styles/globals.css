@@ -178,7 +178,7 @@ button{
 }
 
 .hamburger-menu .menu-secondary-background-color{
-  background-color: black;
+  background-color: #000;
   z-index: -1;
   top: 0;
   bottom: 0;
@@ -191,7 +191,7 @@ button{
 
 .hamburger-menu .menu-layer{
   position: relative;
-  background: red;
+  background: #5b05d3;
   height: 100%;
   overflow: hidden;
 }
