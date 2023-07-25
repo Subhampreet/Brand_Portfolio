@@ -21,6 +21,7 @@ button{
   all: unset;
 }
 
+
 /* -------------Home-------------- */
 
 .Home .container {  
@@ -191,7 +192,7 @@ button{
 
 .hamburger-menu .menu-layer{
   position: relative;
-  background: #5b05d3;
+  background: #110cf1;
   height: 100%;
   overflow: hidden;
 }
@@ -210,20 +211,35 @@ button{
   animation: cameraPan 30s infinite ;
 }
 
+.hamburger-menu .menu-layer .container .bottom{
+  position: absolute;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  background-color: #000;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  color: #fff;
+  /* display: none; */
+}
+
 .hamburger-menu .menu-layer .wrapper{
   position: relative;
+  width: 75%;
 }
 
 .hamburger-menu .menu-layer .wrapper .menu-links{
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  top: 200px;
+  top: 100px;
 }
 
 .hamburger-menu .menu-layer .wrapper .menu-links nav{
-  display: block;
+  /* display: block; */
+  width: 35%;
 }
 
 .hamburger-menu .menu-layer .wrapper .menu-links nav ul{
@@ -231,37 +247,65 @@ button{
   margin: 0;
 }
 
+.hamburger-menu .menu-layer .wrapper .menu-links nav ul .socials{
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 70px;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links nav ul .socials a{
+  margin-right: 20px;
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links nav ul .socials a:hover{
+  cursor: pointer;
+}
+
 .hamburger-menu .menu-layer .wrapper .menu-links nav ul li{
   list-style: none;
-  font-size: 6rem;
+  font-size: 3.8rem;
   font-weight: 700;
   cursor: pointer;
-  height: 135px;
+  height: 95px;
   overflow: hidden;
   position: relative;
-  width: 700px;
+  /* width: 700px; */
 }
 
 .hamburger-menu .menu-layer .wrapper .menu-links nav ul li .menu-item{
   position: absolute;
   color: white;
   text-decoration: none;
+  /* overflow: hidden;
+  position: relative;
+  display: inline-block; */
 }
 
+
+
 .hamburger-menu .menu-layer .wrapper .menu-links nav ul li .menu-item:hover{
-  color: black;
+  color:#3877F0;
 }
 
 .hamburger-menu .menu-layer .wrapper .menu-links .info{
   color: #fff;
-  width: 500px;
+  width: 52%;
 }
 
-.hamburger-menu .menu-layer .wrapper .menu-links .info h3{
-  font-size: 1.5rem;
-  width: 300px;
-  letter-spacing: 0.08rem;
-  line-height: 20px;
+.hamburger-menu .menu-layer .wrapper .menu-links .info .head{
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 6.6rem;
+  color: #fff;
+  margin-bottom: 40px !important;
+  line-height: 5.9rem;
+  /* width: 300px; */
+  /* letter-spacing: 0.08rem; */
+  /* line-height: 20px; */
+}
+
+.hamburger-menu .menu-layer .wrapper .menu-links .info .head span{
+  color: #3877F0;
 }
 
 .hamburger-menu .menu-layer .wrapper .menu-links .info p{

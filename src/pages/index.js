@@ -2,12 +2,16 @@ import MenuButton from '@/components/MenuButton';
 import Head from 'next/head';
 import Header from '@/components/Header/Header';
 import Marquee from "react-fast-marquee";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { gsap } from 'gsap';
+
 
 
 export default function Home() {
 
   const [play, setPlay] = useState(false);
+  let head1 = useRef(null);  
+  
 
   return (
     <div className="Home">
@@ -37,7 +41,7 @@ export default function Home() {
           </div>
           <div className="mid">
             <p>
-              {/* <Marquee play={false} pauseOnHover={false}>I'm Freelance Web and</Marquee> */}
+              {/* <span >I'm Freelance Web and</span> Product Developer Transforming{' '} */}
               I'm Freelance Web and Product Developer Transforming {' '}
               <img src="/headimg.png"></img> Code Into Art
             </p>

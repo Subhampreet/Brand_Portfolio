@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { gsap } from 'gsap';
+import MenuButton from '../MenuButton';
 
 const cities = [
   { name: 'Mumbai', image: 'https://pbs.twimg.com/media/FBGN4HYVEAA_xYh.jpg' },
@@ -25,6 +26,7 @@ function Hamburger({ state, router }) {
   let line2 = useRef(null);
   let line3 = useRef(null);
   let info = useRef(null);
+  let bottom = useRef(null); 
 
   const [route, setRoute] = useState(router.pathname);
 
@@ -32,21 +34,21 @@ function Hamburger({ state, router }) {
     {
       route: '/about',
       href: '/about',
-      name: 'About Me',
+      name: 'about me',
       ref: line1,
       className: 'menu-item',
     },
     {
       route: '/projects',
       href: '/projects',
-      name: 'Projects',
+      name: 'projects',
       ref: line2,
       className: 'menu-item',
     },
     {
       route: '/contact',
       href: '/contact',
-      name: "Let's Meet",
+      name: "let's meet",
       ref: line3,
       className: 'menu-item',
     },
@@ -95,10 +97,13 @@ function Hamburger({ state, router }) {
         duration: 0,
         opacity: 1,
         height: '100%',
-      });
+      });           
+      
 
       staggerReveal(revealMenuBackground.current, revealMenu.current);
       fadeInUp(info.current);
+      gsap.from(bottom.current, {y:200, delay: 0.8})
+      // fadeInUp(bottom.current);
       // staggerText(line1.current, line2.current, line3.current)
     }
   }, [state]);
@@ -133,6 +138,16 @@ function Hamburger({ state, router }) {
       y: 60,
       duration: 1,
       delay: 0.2,
+      opacity: 0,
+      ease: 'power3.input',
+    });
+  };
+
+  const fadeInUp2 = (node) => {
+    gsap.from(node, {
+      y: 100,
+      duration: 1,
+      delay: 0.3,
       opacity: 0,
       ease: 'power3.input',
     });
@@ -184,6 +199,7 @@ function Hamburger({ state, router }) {
                           ref={menuItem.ref}
                           href={menuItem.href}
                           className={menuItem.className}
+                          data-replace={menuItem.name}
                         >
                           {menuItem.name}
                         </Link>
@@ -204,10 +220,20 @@ function Hamburger({ state, router }) {
                       Let's Connect
                     </Link>
                   </li> */}
+                  <div className="socials">
+                    <a>facebook</a>
+                    <a>github</a>
+                    <a>twitter</a>
+                    <a>instagram</a>
+                    <a>linkedin</a>
+                  </div>
                 </ul>
               </nav>
               <div ref={info} className="info">
-                <h3>Our Promise</h3>
+                {/* <h3>Our Promise</h3> */}
+                <div className="head">
+                  Think. Design. Develop. Launch. <span>Repeat.</span>
+                </div>
                 <p>
                   The passage experienced a surge in popularity during the 1960s
                   when Letraset used it on their dry-transfer sheets, and again
@@ -215,7 +241,7 @@ function Hamburger({ state, router }) {
                   their software.
                 </p>
               </div>
-              <div className="locations">
+              {/* <div className="locations">
                 Locations:
                 {cities.map((el) => (
                   <span
@@ -226,8 +252,10 @@ function Hamburger({ state, router }) {
                     {el.name}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
+          </div>
+          <div className='bottom' ref={bottom}>
           </div>
         </div>
       </div>
