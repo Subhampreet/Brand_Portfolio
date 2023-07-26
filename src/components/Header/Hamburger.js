@@ -27,6 +27,9 @@ function Hamburger({ state, router }) {
   let line3 = useRef(null);
   let info = useRef(null);
   let bottom = useRef(null); 
+  let socnode4 = useRef(null);
+  let socnode5 = useRef(null);
+
 
   const [route, setRoute] = useState(router.pathname);
 
@@ -102,7 +105,11 @@ function Hamburger({ state, router }) {
 
       staggerReveal(revealMenuBackground.current, revealMenu.current);
       fadeInUp(info.current);
+      // fadeInUp2(socnode4.current,5)
+      // fadeInUp2(socnode5.current,10)
       gsap.from(bottom.current, {y:200, delay: 0.8})
+      gsap.from(socnode4.current,{opacity:0, duration:5})
+      gsap.from(socnode5.current,{opacity:0, duration:7})
       // fadeInUp(bottom.current);
       // staggerText(line1.current, line2.current, line3.current)
     }
@@ -138,16 +145,6 @@ function Hamburger({ state, router }) {
       y: 60,
       duration: 1,
       delay: 0.2,
-      opacity: 0,
-      ease: 'power3.input',
-    });
-  };
-
-  const fadeInUp2 = (node) => {
-    gsap.from(node, {
-      y: 100,
-      duration: 1,
-      delay: 0.3,
       opacity: 0,
       ease: 'power3.input',
     });
@@ -221,11 +218,11 @@ function Hamburger({ state, router }) {
                     </Link>
                   </li> */}
                   <div className="socials">
-                    <a>facebook</a>
-                    <a>github</a>
-                    <a>twitter</a>
-                    <a>instagram</a>
-                    <a>linkedin</a>
+                    <a >facebook</a>
+                    <a >github</a>
+                    <a >twitter</a>
+                    <a ref={socnode4}>instagram</a>
+                    <a ref={socnode5}>linkedin</a>
                   </div>
                 </ul>
               </nav>

@@ -52,6 +52,7 @@ button{
 .Home .container .wrapper{
   width: 80%;
   margin: auto;
+  margin-top: 85px;
 }
 
 .Home .container .wrapper .top{
@@ -111,7 +112,16 @@ button{
 
 /* ------------Header----------- */
 .header{
-  height: 80px;
+  height: 87px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.header-dark{
+  background: black;
+  /* box-shadow: 0px 0px 15px 0px #2d2e2f; */
+  border-bottom: 1px solid #2a2727;
 }
 
 .header .container {
@@ -338,6 +348,13 @@ button{
   background: black;
   padding: 8px 24px;
   border-radius: 4px;
+}
+
+
+/* ----------------------ABOUT ME PAGE------------------ */
+
+.AboutMe{
+  height: 3000px;
 }
 
 

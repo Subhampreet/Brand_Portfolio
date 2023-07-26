@@ -50,8 +50,26 @@ function Header({router}) {
     },1200);
   };
 
+  const [show, handleShow] = useState(false);
+
+  useEffect(() => {
+      window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+          handleShow(true);
+      } else handleShow(false);
+      });
+      return () => {
+      window.removeEventListener("scroll", () => {
+          if (window.scrollY < 100) {
+          // do this
+          handleShow(false);
+          } else handleShow(true);
+      });
+      };
+  }, []);
+
   return (
-    <div className='header'>
+    <div className={`header ${show && "header-dark"}`}>
         <div className='container'>
             <div className='wrapper'>
                 <div className='inner-header'>
