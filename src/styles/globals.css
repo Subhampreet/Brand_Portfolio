@@ -380,20 +380,42 @@ button{
   color: #989AAB;  
 }
 
+.AboutMe .banner .body .bottom{
+  overflow: hidden;
+  border-radius: 30px;
+  transition: transform 0.5s ease;
+}
+
+.AboutMe .banner .body .bottom:hover{
+  transform: scale(0.9);  
+}
+
 .AboutMe .banner .body .bottom img{
   object-fit: cover;
   width: 100%;
   height: 500px;
   background-position: center;
   border-radius: 30px;
+  transition: transform 0.5s ease;
 }
 
-.AboutMe .info{
+.AboutMe .banner .body .bottom img:hover{
+  /* transform: scale(0.9); */
+  /* transform: translate3d(-50%, -42.4811%, 0px); */
+  transform: scale(1.2);
+}
+
+.AboutMe .info_me{
   width: 100%;
-  padding-top: 100px;
+  padding-top: 100px; 
+  background-color: #fff;
+  margin-top: 150px;
+  padding-bottom: 100px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
-.AboutMe .info .body{
+.AboutMe .info_me .body{
   width: 80%;
   margin: auto;
   display: flex;
@@ -401,71 +423,72 @@ button{
   align-items: center;
 }
 
-.AboutMe .info .body .left{
+.AboutMe .info_me .body .left{
   width: 45%;
 }
 
-.AboutMe .info .body .left h5{
-  color: #fff;
+.AboutMe .info_me .body .left h5{
+  color: #000;
   font-size: 36px;
   font-weight: 600;
   line-height: 3rem;
   margin-bottom: 40px !important;
 }
 
-.AboutMe .info .body .left p {
-  color: #e0e0e0;
+.AboutMe .info_me .body .left p {
+  color: #050505;
   line-height: 1.8rem;
   letter-spacing: 0.05rem;
   font-weight: 400;
   width: 90%;
+  margin-bottom: 50px;
 }
 
-.AboutMe .info .body .left .techstack-tags{
+.AboutMe .info_me .body .left .techstack-tags{
   width: 90%;
-  margin-top: 50px;
+  margin-top: 4px;
   display: flex;
 }
 
-.AboutMe .info .body .left .techstack-tags .tag{
+.AboutMe .info_me .body .left .techstack-tags .tag{
   padding: 5px 25px;
   color: #fff;
   background-color: #0909f0;
   width: fit-content;
   font-size: 50px;
   font-family: 'Bebas Neue', sans-serif;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   margin-right: 4px;
-  border-radius: 35px;
+  /* border-radius: 35px; */
 }
 
-.AboutMe .info .body .left .techstack-tags .yellow{
+.AboutMe .info_me .body .left .techstack-tags .yellow{
   background-color: yellow;
   color: #000;
 }
 
-.AboutMe .info .body .left .techstack-tags .green{
+.AboutMe .info_me .body .left .techstack-tags .green{
   background-color: greenyellow;
   color: #000;
 }
 
-.AboutMe .info .body .right{
+.AboutMe .info_me .body .right{
   width: 50%;
 }
 
-.AboutMe .info .body .right img{
+.AboutMe .info_me .body .right img{
   width: 100%;
 }
 
-.AboutMe .info .body .right .bottom{
+.AboutMe .info_me .body .right .bottom{
   font-family: 'Bebas Neue', sans-serif;
-  color: #fff;
+  color: #000;
   margin-top: 30px;
   font-size: 120px;
   line-height: 5.8rem;
 }
 
-.AboutMe .info .body .right .bottom span {
+.AboutMe .info_me .body .right .bottom span {
   color: #FBE309;
 }
 
