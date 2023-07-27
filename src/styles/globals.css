@@ -421,12 +421,40 @@ button{
   width: 90%;
 }
 
+.AboutMe .info .body .left .techstack-tags{
+  width: 90%;
+  margin-top: 50px;
+  display: flex;
+}
+
+.AboutMe .info .body .left .techstack-tags .tag{
+  padding: 5px 25px;
+  color: #fff;
+  background-color: #0909f0;
+  width: fit-content;
+  font-size: 50px;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 10px;
+  margin-right: 4px;
+  border-radius: 35px;
+}
+
+.AboutMe .info .body .left .techstack-tags .yellow{
+  background-color: yellow;
+  color: #000;
+}
+
+.AboutMe .info .body .left .techstack-tags .green{
+  background-color: greenyellow;
+  color: #000;
+}
+
 .AboutMe .info .body .right{
   width: 50%;
 }
 
 .AboutMe .info .body .right img{
-  width: 90%;
+  width: 100%;
 }
 
 .AboutMe .info .body .right .bottom{
