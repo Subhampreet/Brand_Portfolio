@@ -354,9 +354,95 @@ button{
 /* ----------------------ABOUT ME PAGE------------------ */
 
 .AboutMe{
-  height: 3000px;
+  width: 100%;
+  /* height: 3000px; */
 }
 
+.AboutMe .banner{
+  width: 100%;
+  margin-top: 150px;
+}
+
+.AboutMe .banner .body{
+  width: 75%;
+  margin: auto;
+}
+
+.AboutMe .banner .body .top{
+  color: #fff;
+  font-size: 30px;
+  line-height: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+
+.AboutMe .banner .body .top p span{
+  color: #989AAB;  
+}
+
+.AboutMe .banner .body .bottom img{
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  border-radius: 30px;
+}
+
+.AboutMe .info{
+  width: 100%;
+  padding-top: 100px;
+}
+
+.AboutMe .info .body{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AboutMe .info .body .left{
+  width: 45%;
+}
+
+.AboutMe .info .body .left h5{
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 3rem;
+  margin-bottom: 40px !important;
+}
+
+.AboutMe .info .body .left p {
+  color: #e0e0e0;
+  line-height: 1.8rem;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  width: 90%;
+}
+
+.AboutMe .info .body .right{
+  width: 50%;
+}
+
+.AboutMe .info .body .right img{
+  width: 90%;
+}
+
+.AboutMe .info .body .right .bottom{
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff;
+  margin-top: 30px;
+  font-size: 120px;
+  line-height: 5.8rem;
+}
+
+.AboutMe .info .body .right .bottom span {
+  color: #FBE309;
+}
+
+
+/* -------------------- ANIMATION KEY-FRAMES ------------------ */
 
 @keyframes cameraPan {
   0% {
