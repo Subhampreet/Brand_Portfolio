@@ -34,13 +34,49 @@ function About() {
             </Marquee> */}
           </div>
           <div className='right'>
-            <img src="./about_02.jpg" />
+            <div className='img_cont'>
+               <img src="./about_02.jpg" />
+            </div>
             <div className='bottom'>
               LET’S KNOW EACH OTHER <span>MORE</span>
             </div>
           </div>
         </div>
+        <div className='language'>
+        <div className='lan-top'>
+          <div className='lan-top-left'>
+            <h3>DEVELOPING IN</h3>
+          </div>
+          {/* <div className='lan-top-right'>
+            <p>I Develop product using the following ingredients</p>
+          </div> */}
+        </div>
+        <div className='lan-bottom'>
+          <div className='mar-1'>
+            <Marquee speed={60}>
+              <p>React</p>
+              <p>Next JS</p>
+              <p>JavaScript</p>
+              <p>DotNet</p>
+              <p>MONGODB</p>
+              <p>Supabase</p>
+              <p>Figma</p>
+            </Marquee>
+          </div>
+          <div className='mar-2'>
+            <Marquee speed={120}>
+              <p>React</p>
+              <p>Next JS</p>
+              <p>JavaScript</p>
+              <p>DotNet</p>
+              <p>MONGODB</p>
+              <p>Supabase</p>
+              <p>Figma</p>
+            </Marquee>
+          </div>
+        </div>
       </div>
+      </div>      
     </div>
   )
 }

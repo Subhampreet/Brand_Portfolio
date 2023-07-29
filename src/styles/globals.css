@@ -478,6 +478,23 @@ button{
 
 .AboutMe .info_me .body .right img{
   width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.AboutMe .info_me .body .right .img_cont{
+  overflow: hidden;
+  border-radius: 30px;
+  transition: transform 0.5s ease;
+}
+
+.AboutMe .info_me .body .right .img_cont:hover{
+  transform: scale(0.9);
+}
+
+.AboutMe .info_me .body .right img:hover{
+  transform: scale(1.2);
 }
 
 .AboutMe .info_me .body .right .bottom{
@@ -490,6 +507,46 @@ button{
 
 .AboutMe .info_me .body .right .bottom span {
   color: #FBE309;
+}
+
+.AboutMe .info_me .language {
+  width: 100%;
+  padding-top: 0px;
+}
+
+.AboutMe .info_me .language .lan-top{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.AboutMe .info_me .language .lan-top .lan-top-left {
+  width: 50%;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #000;
+  font-size: 140px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  line-height: 8rem;
+}
+
+.AboutMe .info_me .language .lan-bottom {
+  margin-top: -90px;
+  width: 100%;
+}
+
+.AboutMe .info_me .language .lan-bottom p{
+  font-family: 'Bebas Neue', sans-serif;
+  color: #000;
+  font-size: 50px;
+  margin: 0px !important;  
+  padding: 10px 50px;
+  border: 3px solid #000;
+  margin-right: 10px !important;
+  margin-bottom: 10px !important;
+  border-radius: 50px;
 }
 
 
