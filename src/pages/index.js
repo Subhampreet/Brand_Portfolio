@@ -43,7 +43,7 @@ export default function Home() {
             <p>
               {/* <span >I'm Freelance Web and</span> Product Developer Transforming{' '} */}
               I'm Freelance Web and Product Developer Transforming {' '}
-              <img src="./headimg.png"></img> Code Into Art
+              <img src="./headimg.png" /> Code Into Art
             </p>
             {/*  */}
             <p></p>
