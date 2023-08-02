@@ -550,6 +550,53 @@ button{
 }
 
 
+/* -----------------------------About Me : Experience Section ------------ */
+.exp{
+  width: 100%;
+  background-color: #0D08FD;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.exp .body{
+  width: 80%;
+  margin: auto;
+  color: #fff;
+}
+
+.exp .body .exp-carousal{
+  width: 100%;
+}
+
+.exp .body .exp-carousal .exp-item{
+  width: 50%;
+}
+
+.exp .body .exp-carousal .exp-item .duration{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 45px;
+}
+
+
+.exp .body .exp-carousal .exp-item .role{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.exp .body .exp-carousal .exp-item .desc{
+  font-size: 15px;
+  line-height: 1.5rem;
+  margin-top: 40px;
+}
+
+.exp .body h3{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 190px;
+  margin: 0px !important;
+  margin-top: 40px !important;
+}
+
 /* -------------------- ANIMATION KEY-FRAMES ------------------ */
 
 @keyframes cameraPan {
