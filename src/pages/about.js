@@ -113,6 +113,23 @@ function About() {
           </div>
         </div>
       </div>
+      <div className='fun-fyi'>
+        <div className='body'>
+          <h3>THREE THINGS TO KNOW ABOUT ME</h3>
+          <p className='fun-fyi-fact'>
+            1 - Developed cross-browser compliant UI of the Migration Tool using React JS,
+            Built multiple visual elements of web applications translating the UI/UX Designs
+            <br /><br />
+            2 - Responsible for developing C#, Dot Net APIs & Functional case statements as per project requirement
+            <br /><br />
+            3 - Involved in developing Complex queries, views and Store Procedures using SQL in Microsoft SQL server, Responsible for Sync to Azure DevOps (TFS Sync).
+
+          </p>
+          <div className='gif'>
+          <img src="./jon-snow-game-of-thrones.gif" className='jon-gif' />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
